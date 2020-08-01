@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+ <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://www.free-css.com/assets/files/free-css-templates/preview/page201/digishop-mini/assets/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="https://www.free-css.com/assets/files/free-css-templates/preview/page201/digishop-mini/assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="https://www.free-css.com/assets/files/free-css-templates/preview/page201/digishop-mini/assets/css/ItemSlider.css">
+<link rel="stylesheet" type="text/css" href="https://www.free-css.com/assets/files/free-css-templates/preview/page201/digishop-mini/assets/css/style.css">
+<title></title>
+
+<style type="text/css">
+#freecssfooter{display:block;width:100%;padding:120px 0 20px;overflow:hidden;background-color:transparent;z-index:5000;text-align:center;}
+#freecssfooter div#fcssholder div{display:none;}
+#freecssfooter div#fcssholder div:first-child{display:block;}
+#freecssfooter div#fcssholder div:first-child a{float:none;margin:0 auto;}
+</style></head>
+<body>
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = '//s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+
+var our=new XMLHttpRequest();
+our.open('GET',"/home/clothing");
+our.onload=function(){
+	var ourdata=JSON.parse(our.responseText);
+	  renderHtml(ourdata);
+};
+	our.send();
+	function renderHtml(data){
+		var name;
+		var price;
+	for (i=0;i<data.length;i++){
+		 name="";
+		 price="";
+	    var imgsrc="/photos/pant.jpeg";
+	      name += data[i].itemName;
+	      price+= data[i].itemPrice;
+	   // imgsrc += "/photos/"+data[x].itemimg;
+	      console.log(imgsrc);
+	      console.log(name);
+	      console.log(price);
+
+	}
+	  	document.getElementById("name").innerHTML = name;
+	      document.getElementById("price").innerHTML = price;
+	      document.getElementById("image").src = imgsrc;
+
+	      	
+
+	  };
+	
+	
+</script>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <a class="navbar-brand" href=""><strong>sneha</strong> online shop </a></div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="">Track Order</a></li>
+        <li><a href="">Login</a></li>
+        <li><a href="">Signup</a></li>
+        <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">24x7 Support <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href=""><strong>Call:</strong> +09-456-567-890</a></li>
+            <li><a href=""><strong>Mail:</strong> </a></li>
+            <li class="divider"></li>
+            <li><a href=""><strong>Address:</strong>
+              <div>234, Damak-1,jhapa<br>
+                     Nepal</div>
+              </a></li>
+          </ul>
+        </li>
+      </ul>
+      <form action="#" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" placeholder="Enter Keyword Here ..." class="form-control">
+        </div>
+        &nbsp;
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="well well-lg offer-box text-center">Today's Offer : &nbsp; <span class="glyphicon glyphicon-cog"></span>&nbsp;40% off on purchase of $2,000 and above till 24 dec !</div>
+      <div class="main box-border">
+        <div id="mi-slider" class="mi-slider">
+          <ul>
+            <li><a href=""><img src="" alt="website template image">
+              <h4>Boots</h4>
+              </a></li>
+            <li><a href=""><img src="" alt="website template image">
+              <h4>Oxfords</h4>
+              </a></li>
+            <li><a href=""><img src="" alt="website template image">
+              <h4>Loafers</h4>
+              </a></li>
+            <li><a href=""><img src="" alt="website template image">
+              <h4>Sneakers</h4>
+              </a></li>
+          </ul>
+          <ul>
+            <li><a href=""><img src="" alt="">
+              <h4>Belts</h4>
+              </a></li>
+            <li><a href=""><img src="assets/img/6.jpg" alt="website template image">
+              <h4>Hats &amp; Caps</h4>
+              </a></li>
+            <li><a href=""><img src="assets/img/7.jpg" alt="website template image">
+              <h4>Sunglasses</h4>
+              </a></li>
+            <li><a href=""><img src="assets/img/8.jpg" alt="website template image">
+              <h4>Scarves</h4>
+              </a></li>
+          </ul>
+          <ul>
+            <li>
+              <h4>Casual</h4>
+              </li>
+            <li><a href=""><img src="assets/img/10.jpg" alt="website template image">
+              <h4>Luxury</h4>
+              </a></li>
+            <li><a href=""><img src="assets/img/11.jpg" alt="website template image">
+              <h4>Sport</h4>
+              </a></li>
+          </ul>
+          <ul>
+            <li><a href=""><img src="" alt="website template image">
+              <h4>Carry-Ons</h4>
+              </a></li>
+            <li><a href=""><img src="" alt="website template image">
+              <h4>Duffel Bags</h4>
+              </a></li>
+            <li><a href=""><img src="" alt="website template image">
+              <h4>Laptop Bags</h4>
+              </a></li>
+            <li><a href=""><img src="" alt="website template image">
+              <h4>Briefcases</h4>
+              </a></li>
+          </ul>
+          <nav><a href="">Shoes</a><a href="">Accessories</a><a href="">Watches</a><a href="">Bags</a></nav>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div class="col-md-3 text-center">
+      <div class="col-md-12 col-sm-6 col-xs-6">
+        <div class="offer-text">30% off here</div>
+        <div class="thumbnail product-box"><img src="assets/img/dummyimg.png" alt="website template image">
+          <div class="caption">
+            <h3><a href=""></a></h3>
+            <p><a href=""></a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-6 col-xs-6">
+        <div class="offer-text2">30% off here</div>
+        <div class="thumbnail product-box"><img src="assets/img/dummyimg.png" alt="website template image">
+          <div class="caption">
+            <h3></h3>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div><a href="" class="list-group-item active">Electronics</a>
+        <ul class="list-group">
+         <a href="/home/electronics/mobile"> <li class="list-group-item">Mobile<span class="label label-primary pull-right">234</span></li></a>
+          <li class="list-group-item">Computers<span class="label label-success pull-right">34</span></li>
+          <li class="list-group-item">Tablets<span class="label label-danger pull-right">4</span></li>
+          <li class="list-group-item">Appliances<span class="label label-info pull-right">434</span></li>
+          <li class="list-group-item">Games &amp; Entertainment<span class="label label-success pull-right">34</span></li>
+        </ul>
+      </div>
+      <div><a href="" class="list-group-item active list-group-item-success">Clothing &amp; Wears</a>
+        <ul class="list-group">
+          <li class="list-group-item">Men's Clothing<span class="label label-danger pull-right">300</span></li>
+          <li class="list-group-item">Women's Clothing<span class="label label-success pull-right">340</span></li>
+          <li class="list-group-item">Kid's Wear<span class="label label-info pull-right">735</span></li>
+        </ul>
+      </div>
+      <div><a href="" class="list-group-item active">Accessaries &amp; Extras</a>
+        <ul class="list-group">
+          <li class="list-group-item">Mobile Accessaries<span class="label label-warning pull-right">456</span></li>
+          <li class="list-group-item">Men's Accessaries<span class="label label-success pull-right">156</span></li>
+          <li class="list-group-item">Women's Accessaries<span class="label label-info pull-right">400</span></li>
+          <li class="list-group-item">Kid's Accessaries<span class="label label-primary pull-right">89</span></li>
+          <li class="list-group-item">Home Products<span class="label label-danger pull-right">90</span></li>
+          <li class="list-group-item">Kitchen Products<span class="label label-warning pull-right">567</span></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-success"><a href="">New Offer's Coming </a></li>
+          <li class="list-group-item list-group-item-info"><a href="">New Products Added</a></li>
+          <li class="list-group-item list-group-item-warning"><a href="">Ending Soon Offers</a></li>
+          <li class="list-group-item list-group-item-danger"><a href="">Just Ended Offers</a></li>
+        </ul>
+      </div>
+      <div class="well well-lg offer-box offer-colors"><span class="glyphicon glyphicon-star-empty"></span>25% off, GRAB IT<br>
+        <br>
+        <div class="progress progress-striped">
+          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%"><span class="sr-only">70% Complete (success)</span>2hr 35 mins left</div>
+        </div>
+        <a href="">click here to know more </a></div>
+    </div>
+    <div class="col-md-9">
+      <div>
+        <ol class="breadcrumb">
+          <li><a href="">Home</a></li>
+          <li class="active">Electronics</li>
+        </ol>
+      </div>
+      <div class="row">
+        <div class="btn-group alg-right-pad">
+          <button type="button" class="btn btn-default"><strong>1235 </strong>items</button>
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"> Sort Products &nbsp; <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="">By Price Low</a></li>
+              <li class="divider"></li>
+              <li><a href="">By Price High</a></li>
+              <li class="divider"></li>
+              <li><a href="">By Popularity</a></li>
+              <li class="divider"></li>
+              <li><a href="">By Reviews</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+       <table style="text-align:center">
+    <thead>
+    <tr>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+           <tr><td>  <img src="" alt="website template image" id="image"></td><tr>
+             <tr><td> <h3 id="name"></h3></td></tr>
+             <tr><td> <p id="price">Price : <strong></strong></p></td></tr>
+             <tr><td> <p id="description"></p></td></tr>
+            <tr><td>  <p><a href="/home/cart" class="btn btn-success" role="button">Add To Cart</a> <a href="" class="btn btn-primary" role="button">See Details</a></p></td></tr>
+        </tbody>
+        </table>
+       
+      <div class="row">
+                       <ul class="pagination alg-right-pad">
+          <li><a href="">>&laquo;</a></li>
+          <li id="one"><a href="">1</a></li>
+          <li><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+          <li><a href="">&raquo;</a></li>
+        </ul>
+      </div>
+      <div>
+                               <ol class="breadcrumb">
+          <li><a href="">Home</a></li>
+          <li><a href="">Clothing</a></li>
+          <li class="active">Men's Clothing</li>
+        </ol>
+      </div>
+      <div class="row">
+        <div class="btn-group alg-right-pad">
+          <button type="button" class="btn btn-default"><strong>3005 </strong>items</button>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> Sort Products &nbsp; <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="">By Price Low</a></li>
+              <li class="divider"></li>
+              <li><a href="">By Price High</a></li>
+              <li class="divider"></li>
+              <li><a href="">By Popularity</a></li>
+              <li class="divider"></li>
+              <li><a href="">By Reviews</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 text-center col-sm-6 col-xs-6">
+          <div class="thumbnail product-box"><img src="/photos/pant.jpeg" alt="website template image">
+            <div class="caption">
+              <h3 class="name2"></h3>
+              <p class="price2">Price : <strong></strong></p>
+              <p></p>
+              <p></p>
+              <p><a href="" class="btn btn-success" role="button">Add To Cart</a><a href="" class="btn btn-primary" role="button">See Details</a></p>
+            </div>
+          </div>
+        </div>
+       
+      <div class="row">
+        <ul class="pagination alg-right-pad">
+          <li><a href="">&laquo;</a></li>
+          <li><a href="">1</a></li>
+          <li><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+          <li><a href="">&raquo;</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-12 download-app-box text-center"><span class="glyphicon glyphicon-download-alt"></span>Download Our Android App and Get 10% additional Off on all Products . <a href="" class="btn btn-danger btn-lg">DOWNLOAD  NOW</a></div>
+<div class="col-md-12 footer-box">
+  <div class="row small-box"><strong>Mobiles :</strong> <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | view all items</div>
+  <div class="row small-box"><strong>Laptops :</strong> <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | view all items</div>
+  <div class="row small-box"><strong>Tablets : </strong><a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | view all items</div>
+  <div class="row small-box pad-botom"><strong>Computers :</strong> <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | <a href="">samsung</a> | <a href="">Sony</a> | <a href="">Microx</a> | view all items</div>
+  <div class="row">
+    <div class="col-md-4"><strong>Send a Quick Query </strong>
+      <hr>
+      <form action="#" method="post">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <input type="text" class="form-control" required placeholder="Name">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="form-group">
+              <input type="text" class="form-control" required placeholder="Email address">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="form-group">
+              <textarea name="message" id="message" required class="form-control" rows="3" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Submit Request</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-4"><strong>Our Location</strong>
+      <hr>
+      <p>Lakhanpur-3,kamal gaupalika<br>
+        jhapa,Nepal<br>
+        Call:98---------<br>
+        Email:ujall123@gmail.com<br>
+      </p>
+      2015 www.yourdomain.com | All Right Reserved</div>
+    <div class="col-md-4 social-box"><strong>We are Social</strong>
+      <hr>
+      <a href=""><i class="fa fa-facebook-square fa-3x"></i></a> <a href=""><i class="fa fa-twitter-square fa-3x"></i></a> <a href=""><i class="fa fa-google-plus-square fa-3x c"></i></a> <a href=""><i class="fa fa-linkedin-square fa-3x"></i></a> <a href=""><i class="fa fa-pinterest-square fa-3x"></i></a>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec nisl odio. Mauris vehicula at nunc id posuere. Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.</p>
+    </div>
+  </div>
+  <hr>
+</div>
+<div class="col-md-12 end-box">&copy; 2015 | &nbsp; All Rights Reserved | &nbsp; www.yourdomain.com | &nbsp; 24x7 support | &nbsp; Email us: info@yourdomain.com</div>
+<script src="assets/js/jquery-1.10.2.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/modernizr.custom.63321.js"></script>
+<script src="assets/js/jquery.catslider.js"></script>
+<script>$(function () {$('#mi-slider').catslider();});</script>
+<div id="freecssfooter">
+  <div id="fcssholder">
+    <div id="bsap_2365" class="bsarocks bsap_b893e54e42ad5b76e7b252f59be18e67"></div>
+  </div>
+</div>
+<script type="text/javascript">
+var gaProperty = 'UA-120201777-1';var disableStr = 'ga-disable-' + gaProperty;if (document.cookie.indexOf(disableStr + '=true') > -1) {window[disableStr] = true;}
+function gaOptout(){document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2045 23:59:59 UTC; path=/';window[disableStr] = true;alert('Google Tracking has been deactivated');}
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-120201777-1', 'auto');ga('set', 'anonymizeIp', true);ga('send', 'pageview');
+
+
+
+</script>
+</body>
+</html>
